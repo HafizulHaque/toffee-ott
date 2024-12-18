@@ -1,6 +1,8 @@
+import RootLayout from "./layouts/RootLayout"
+
 function App() {
   return (
-    <h1>Hello OTT</h1>
+    <RootLayout/>
   )
 }
 
