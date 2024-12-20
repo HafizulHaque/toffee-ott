@@ -2,7 +2,6 @@ import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } 
 import BaseLayout from "./BaseLayout";
 import HomePage from "../pages/HomePage";
 import PlayVideoPage from "../pages/PlayVideoPage";
-import VideoPlayerLayout from "./VIdeoPlayerLayout";
 
 function RootLayout(){
 
@@ -10,9 +9,7 @@ function RootLayout(){
     createRoutesFromElements(
       <Route path="/" element={<BaseLayout/>}>
         <Route index element={<HomePage/>}/>
-        <Route path="video" element={<VideoPlayerLayout/>}>
-          <Route path=":id" element={<PlayVideoPage/>}/>
-        </Route>
+        <Route path="video/:id" element={<PlayVideoPage/>}/>
       </Route>
     )
   )

@@ -1,8 +1,11 @@
+import { AppProvider } from "./contexts/appContext"
 import RootLayout from "./layouts/RootLayout"
 
 function App() {
   return (
-    <RootLayout/>
+    <AppProvider>
+      <RootLayout/>
+    </AppProvider>
   )
 }
 
