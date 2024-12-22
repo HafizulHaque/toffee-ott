@@ -18,8 +18,3 @@ body {
   -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
 
-/* For Chrome, Edge, and Safari */
-body::-webkit-scrollbar {
-  display: none;
-}
-

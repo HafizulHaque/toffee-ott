@@ -8,7 +8,7 @@ export const appReducer = (prevState, action) => {
   }
 
   if(!action.payload){
-    throw new Error('required action payload not provided');
+    throw new Error(`required action payload not provided for: ${action.type} [${action.payload}]`);
   }
 
   let state = { ...prevState }
@@ -26,11 +26,13 @@ export const appReducer = (prevState, action) => {
       }
       state.currentFocusArea = action.payload;
       break;
-    case ACTIONS.SET_CURRENT_CONTENT:
-      let { id, genre } = action.payload;
-      console.log(`Genre: ${genre}, contentId: ${id} setting to application state`)
-      state.currentGenre = genre;
-      state.currentContentId = id;
+    case ACTIONS.SET_CURRENT_GENRE:
+      state.currentGenre = action.payload;
+      console.log(`Genre: ${action.payload} saved to application state`)
+      break;
+    case ACTIONS.SET_CURRENT_CONTENT_ID:
+      state.currentContentId = action.payload;
+      console.log(`ContentId: ${action.payload} saved to application state`)
       break;
     default:
       throw new Error(`Unhandled action type: ${action.type}`);

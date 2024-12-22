@@ -17,10 +17,16 @@ export function useAppState() {
       payload: focusArea
     })
   }
-  const setContent = (content) => {
+  const setGenre = (genre) => {
     dispatch({
-      type: ACTIONS.SET_MENU,
-      payload: content
+      type: ACTIONS.SET_CURRENT_GENRE,
+      payload: genre
+    })
+  }
+  const setContentId = (contentId) => {
+    dispatch({
+      type: ACTIONS.SET_CURRENT_CONTENT_ID,
+      payload: contentId
     })
   }
 
@@ -31,7 +37,8 @@ export function useAppState() {
     currentContentId: state.currentContentId,
     setMenu,
     setFocusArea,
-    setContent
+    setGenre,
+    setContentId
   }
 
 

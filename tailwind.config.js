@@ -1,4 +1,4 @@
-const { sidenavWidth } = require('./src/constants/uiConstants');
+import { sidenavWidth } from './src/constants/uiConstants';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
