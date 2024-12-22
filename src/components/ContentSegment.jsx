@@ -9,7 +9,7 @@ const ContentSegment = forwardRef(({ menu, genre, contents }, ref) => {
   return (
     <div className='mb-16'>
       <h1 className='mb-4 text-3xl font-medium text-primary-action'>{genre}</h1>
-      <div className="grid grid-cols-4 gap-x-8 gap-y-6">
+      <div className="grid grid-cols-3 gap-x-8 gap-y-6">
         { contents.map(content => (
           <ContentCard
             key={content.id}

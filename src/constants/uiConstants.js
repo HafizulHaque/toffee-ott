@@ -12,4 +12,4 @@ export const sidenavWidth = {
   expanded: 240
 };
 
-export const ContentPerRow = 4;
+export const ContentPerRow = 3;

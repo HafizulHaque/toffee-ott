@@ -1,12 +1,12 @@
 import { Outlet, NavLink } from "react-router-dom";
-import HeaderComponent from "../components/HeaderComponent";
-import SideNavbarComponent from "../components/SideNavbarComponent";
+import Header from "../components/Header";
+import SideNavbar from "../components/SideNavbar";
 
 function BaseLayout() {
   return (
     <div className="ps-left-nav">
-      <HeaderComponent/>
-      <SideNavbarComponent/>
+      <Header/>
+      <SideNavbar/>
       <Outlet/>
     </div>
   )

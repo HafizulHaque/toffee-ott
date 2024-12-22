@@ -7,9 +7,10 @@ export const appReducer = (prevState, action) => {
     throw new Error('called reducer without action type');
   }
 
-  if(!action.payload){
-    throw new Error(`required action payload not provided for: ${action.type} [${action.payload}]`);
-  }
+  // if(!action.payload){
+  //   // if([ACTIONS.SET_CURRENT_GENRE, ACTIONS.SET_CURRENT_CONTENT_ID].includes(action.type)) return;
+  //   throw new Error(`required action payload not provided for: ${action.type} [${action.payload}]`);
+  // }
 
   let state = { ...prevState }
 

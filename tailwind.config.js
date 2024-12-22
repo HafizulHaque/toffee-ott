@@ -11,7 +11,6 @@ module.exports = {
       colors: {
         "primary-action": "#FF3988",
         "background": "#3E003B",
-        "sidenav-gradient": "#130016",
       },
       padding: {
         "left-nav": "80px",
@@ -24,8 +23,7 @@ module.exports = {
         "nav-expanded": `${sidenavWidth.expanded}px`,
       },
       backgroundImage: {
-        "sidenav-gradient-normal": "linear-gradient(to right, rgba(19, 0, 22, .8), rgba(19, 0, 22, .3))",
-        "sidenav-gredient-expanded": "linear-gradient(to right, rgba(19, 0, 22, .8), rgba(19, 0, 22, .4))",
+        "sidenav-gradient": "linear-gradient(to right, rgba(19, 0, 22, 1), rgba(19, 0, 22, .5))",
       }
     },
   },
