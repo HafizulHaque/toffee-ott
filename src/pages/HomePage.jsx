@@ -1,8 +1,8 @@
+import { useEffect, useRef } from "react";
+import { useAppState } from '/src/hooks/useAppState';
 import { contentList } from "../constants/contentList";
 import { FOCUS_AREA_OPTIONS } from "../constants/stateConstants";
 import ContentSegment from '/src/components/ContentSegment';
-import { useAppState } from '/src/hooks/useAppState';
-import { useEffect, useRef } from "react";
 
 function HomePage() {
 

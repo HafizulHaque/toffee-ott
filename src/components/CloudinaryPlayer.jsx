@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import cloudinary from 'cloudinary-video-player';
 import "cloudinary-video-player/cld-video-player.min.css";
+import { CLOUD_NAME } from '../constants/videoSourceContansts';
 
 const CloudinaryPlayer = ({ id, publicId, playerConfig, sourceConfig, ...props }) => {
   
@@ -15,7 +16,7 @@ const CloudinaryPlayer = ({ id, publicId, playerConfig, sourceConfig, ...props }
     cloudinaryRef.current = cloudinary;
 
     let player = cloudinaryRef.current.videoPlayer(playerRef.current, {
-      cloud_name: 'dahdg7t8n',
+      cloud_name: CLOUD_NAME,
       secure: true,
       controls: true,
       ...playerConfig,

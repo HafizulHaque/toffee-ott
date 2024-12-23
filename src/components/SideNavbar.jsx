@@ -19,7 +19,7 @@ const SideNavbar = () => {
     <nav
       ref={navRef}
       tabIndex={-1} 
-      className={`fixed top-0 left-0 h-screen focus:outline-none bg-sidenav-gradient w-[80px] hover:w-[240px] focus:w-[240px] transition-[width] duration-200 ease-in-out group`}>
+      className={`fixed top-0 left-0 z-50 h-screen focus:outline-none bg-sidenav-gradient w-[80px] hover:w-[240px] focus:w-[240px] transition-[width] duration-200 ease-in-out group`}>
       <div className="h-full flex flex-col justify-center gap-y-8">
         {Menus.map(menu => {
           let MenuIcon = menu.icon;
