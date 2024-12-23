@@ -59,14 +59,16 @@ const GlobalKeyEventHandler = () => {
           break;
 
         case KEY_EVENT_VALUES.ARROW_UP:
-          if(currentContentIndex - ContentPerRow > 0){
+          if(currentContentIndex - ContentPerRow >= 0){
             //content remain in current genre
             setContentId(contents[currentContentIndex-ContentPerRow].id);
           } else {
             //go to prev genre
             if(currentGenreIndex - 1 >= 0){
-              setGenre(genres[currentGenreIndex - 1])
-              setContentId(1);
+              let prevGenre = genres[currentGenreIndex - 1];
+              let prevGenreContentLen = contentList[menu][prevGenre].length;
+              setGenre(prevGenre)
+              setContentId(contentList[menu][prevGenre][prevGenreContentLen-1].id);
             }
           }
           break;
