@@ -17,6 +17,8 @@ module.exports = {
       },
       boxShadow: {
         "header": "rgba(255, 255, 255, 0.1) 0px 10px 10px -10px",
+        "player": "rgba(255, 57, 136, 0.1) 0px 4px 16px, rgba(255, 57, 136, 0.1) 0px 8px 24px, rgba(255, 57, 136, 0.1) 0px 16px 56px",
+        "back-button": "rgba(255, 57, 136, 0.2) 0px 12px 28px 0px, rgba(255, 57, 136, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset",
       },
       width: {
         "nav-normal": `${sidenavWidth.normal}px`,

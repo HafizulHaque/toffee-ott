@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useAppState } from '/src/hooks/useAppState';
 import { FOCUS_AREA_OPTIONS } from "../constants/stateConstants";
 import { Menus } from "../constants/uiConstants";
+import { Link } from "react-router-dom";
 
 const SideNavbar = () => {
 
@@ -23,7 +24,8 @@ const SideNavbar = () => {
         {Menus.map(menu => {
           let MenuIcon = menu.icon;
           return (
-            <div 
+            <Link
+              to={'/'} 
               key={menu.id} 
               role="button" 
               className={`grid grid-cols-3 hover:text-primary-action/60 ${currentMenu === menu.title ? 'text-primary-action hover:text-primary-action':''} transform hover:scale-110`} 
@@ -35,7 +37,7 @@ const SideNavbar = () => {
               <div className="col-span-2 hidden group-hover:block group-focus:block my-auto pe-2">
                 <h2 className="text-2xl line-clamp-1 overflow-hidden">{menu.title}</h2>
               </div>
-            </div>
+            </Link>
           )
         })}
       </div>

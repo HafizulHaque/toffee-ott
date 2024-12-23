@@ -11,17 +11,19 @@ const CloudinaryPlayer = ({ id, publicId, playerConfig, sourceConfig, ...props }
   useEffect(() => {
     
     if (cloudinaryRef.current) return;
-
+    
     cloudinaryRef.current = cloudinary;
 
-    const player = cloudinaryRef.current.videoPlayer(playerRef.current, {
+    let player = cloudinaryRef.current.videoPlayer(playerRef.current, {
       cloud_name: 'dahdg7t8n',
       secure: true,
       controls: true,
       ...playerConfig,
     });
+
     player.source(publicId, sourceConfig);
-  }, []);
+
+  }, [publicId, playerConfig, sourceConfig]);
 
   return (
     <video
